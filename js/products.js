@@ -33,10 +33,11 @@ function showProductsList() {
         }
     }
 
-    // Inserta el contenido generado en el contenedor especificado
+    // Inserta el contenido generado en el div
     document.getElementById("product-list-container").innerHTML = htmlContentToAppend;
-}
+}   
 
+// petición de json
 document.addEventListener("DOMContentLoaded", function(e) {
     getJSONData("https://japceibal.github.io/emercado-api/cats_products/101.json").then(function(resultObj) {
         if (resultObj.status === "ok") {
